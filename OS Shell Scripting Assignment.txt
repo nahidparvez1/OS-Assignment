@@ -1,0 +1,524 @@
+##################
+Ex 01
+##################
+echo "Enter value of a";
+read a
+echo "Enter value of b";
+read b
+c= expr $a + $b
+
+echo $c
+##################
+Ex 02
+##################
+##################
+Ex 03
+##################
+echo “enter basic salary”
+read bs
+hra=$(( $bs * 10 / 100 ))
+echo $hra
+ta=$(( $bs * 15 / 100 ))
+echo $ta
+da=$(( $bs * 2 / 100 ))
+echo $da
+tax=$(( $bs * 5 / 100 ))
+echo $tax
+pf=$(( $bs * 10 / 100 ))
+echo $pf
+add=$(( $hra + $ta + $da ))
+echo $add
+ded=$(( $tax + $pf ))
+echo $ded
+netsal=$(( $bs + $add - $ded ))
+echo "net salary is $netsal"
+##################
+Ex 04
+##################
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
+##################
+Ex 05
+##################
+echo -n "Enter a number: "
+read a
+echo -n "Enter another Number: "
+read b
+echo -n "Enter an operator: "
+read c
+case $c in
++)x=$(( $a + $b )) ;;
+-)x=$(( $a - $b )) ;;
+/)x=$(( $a / $b )) ;;
+*)x=$(( $a * $b )) ;;
+esac
+echo $x
+##################
+Ex 06
+##################
+echo "Enter a String"
+read st
+echo "${#st} is the length of your string"
+##################
+Ex 07
+##################
+echo "Enter a Year"
+read yr
+
+lpYr=$"$yr % 4"
+if [[ $lpYr -eq 0 ]]
+then
+echo "$yr is Leap Year"
+else
+echo "$yr is not Leap Year"
+fi
+##################
+Ex 08
+##################
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
+##################
+Ex 09
+##################
+echo "Enter First String"
+read str1
+
+echo "Enter Second String"
+read str2
+
+str3="$str1 $str2"
+
+echo "After concate $str3"
+##################
+Ex 10
+##################
+v#################
+Ex 11
+##################
+##################
+Ex 12
+##################
+echo "Enter a Number";
+read a
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+t=$(( $a * $i ))
+echo $t
+i=$(( $i + 1 ))
+done
+##################
+Ex 13
+##################
+##################
+Ex 14
+##################
+##################
+Ex 15
+##################
+##################
+Ex 16
+##################
+##################
+Ex 17
+##################
+##################
+Ex 18
+##################
+##################
+Ex 19
+##################
+##################
+Ex 20
+##############
+a=2
+echo "Enter Vlaue"
+read n
+
+while [ $a -le $n ]
+do 
+echo -n " $a "
+
+a=$(( $a + 2))
+
+done
+echo ""
+######################
+Ex 21
+##################
+a=1
+b=5
+while [ $b -le 50 ]
+do 
+echo -n " $a $b "
+
+a=$(( $a + 1 ))
+b=$(( $b + 5 ))
+done
+echo ""
+########################
+Ex 22
+#######################
+a=1
+echo "Enter value"
+read n
+while [ $a -le $n ]
+do 
+echo -n "$a+1/"
+
+a=$(( $a + 1 ))
+
+done
+echo ""
+########################
+Ex 23
+########################
+a=1
+b=2
+echo "Enter value"
+read n
+n=$(( $n -1 ))
+while [ $a -le $n ]
+do 
+echo -n "$a/$b+"
+
+a=$(( $a + 1 ))
+b=$(( $b + 1 ))
+
+done
+echo ""
+#######################
+Ex 24
+########################
+a=1
+sum=0
+echo "Enter value"
+read n
+while [ $a -le $n ]
+do 
+
+b=$(( $a * $a ))
+sum=$(( $sum + $b ))
+a=$(( $a + 1 ))
+
+done
+echo "$sum"
+echo ""
+#######################
+Ex 25
+#########################
+echo "Enter Salary"
+read sal
+
+if [ $sal -ge 5000 ]
+then
+bonus=$(( $sal * 5 / 100 ))
+else
+bonus=250
+fi
+echo "Bonus is: $bonus"
+######################
+Ex 26
+##########################
+echo "Enter number of Integers"
+read n
+echo "enter value no 1"
+read j
+i=2
+while [ $i -le $n ]
+do
+echo "Enter value no $i"
+read k
+if [ $j -lt $k ]
+then
+j=$k
+fi
+i=$(( $i + 1 ))
+done
+echo "Greatest input is: $j"
+#####################
+Ex 27
+##########################
+echo "Enter a number"
+read n
+sd=0
+rev=0
+
+while [ $n -gt 0 ]
+do
+    sd=$(( $n % 10 ))
+    rev=$(( $rev * 10 + $sd ))
+    n=$(( $n / 10 ))
+done
+
+echo "Reverse number of entered digit is $rev"
+#####################
+Ex 28
+##########################
+#####################
+Ex 29
+##########################
+echo "Enter a number"
+read n
+sd=0
+rev=0
+
+while [ $n -gt 0 ]
+do
+    sd=$(( $n % 10 ))
+    rev=$(( $rev * 10 + $sd ))
+    n=$(( $n / 10 ))
+done
+
+echo "Reverse number of entered digit is $rev"
+#####################
+Ex 30
+#######################
+echo "Enter a String "
+read str
+reverse=""
+len=${#str}
+
+for (( i=$len-1; i>=0; i-- ))
+do
+ reverse="$reverse${str:$i:1}"
+
+
+done
+echo "$reverse" 
+############################
+Ex 31
+##########################
+echo "Enter a String "
+read str
+reverse=""
+len=${#str}
+
+for (( i=$len-1; i>=0; i-- ))
+do
+ reverse="$reverse${str:$i:1}"
+
+
+done
+if [ $str == $reverse ]
+then
+echo "String is palimdrom"
+else
+echo "String are not palimdrom"
+fi
+#####################
+Ex 32
+#####################
+echo "Enter a String"
+read str
+echo "Enter a char to search position"
+read ch
+i=0
+
+len=${#str}
+while ((i<$len));do
+a=${str:i:1}
+if [[ $a == $ch ]]
+then
+echo "Position of '$ch' is  $i"
+fi
+((++i))
+done
+#####################
+Ex 33
+#####################
+echo "Enter a String"
+read str
+i=0
+space=0
+charr=0;
+
+len=${#str}
+while ((i<$len));do
+a=${str:i:1}
+if [[ $a == " " ]]
+then
+space=$(( $space + 1 ))
+
+else
+charr=$(( $charr + 1))
+
+fi
+((++i))
+done
+echo " Total charachter is: $charr"
+echo "Total space is: $space"
+#####################
+Ex 34
+#####################
+echo "Enter a last number "
+read n
+a=0
+i=0
+b=1
+echo -n "$a "
+echo -n "$b"
+while [ $i -lt $n ]
+do
+c=$(( $a + $b ))
+if [ $c -gt $n ]
+then
+exit
+fi
+echo -n " $c "
+a=$b
+b=$c
+i=$(( $i + 1 ))
+done
+#####################
+Ex 35
+#####################
+echo "Enter information in file"
+
+cat > file.txt
+
+cat file.txt |tr '[:lower:]' '[:upper:]'
+#####################
+Ex 36
+#####################
+ Pwd
+ clear 
+ date
+ mkdir
+ cd 
+mkdir d1 
+cd d1 
+ touch file1 file2 
+chmod 644 file1 file2 
+Is
+#####################
+Ex 37
+#####################
+echo "Enter students five subjects marks"
+read m1
+read m2
+read m3
+read m4
+read m5
+
+m=$(( $m1 +$m2 +$m3 +$m4 +$m5 ))
+per=$(( $m / 5 ))
+echo "$per"
+if [ $per -gt 60  ]
+then
+echo "First division"
+elif [ $per -gt 50 -a -$per -lt 60 ]
+then
+echo "Second division"
+elif [ $per -gt 40 -a -$per -lt 50 ]
+then
+echo "Third division"
+else
+echo "Faild"
+fi
+#####################
+Ex 38
+#####################
+#####################
+Ex 39
+#####################
+echo "enter the value of n"
+read n
+i=1
+while [ $i -le $n ]
+do
+echo -n " $i "
+i=$(( $i + $i ))
+
+done
+echo ""
+#####################
+Ex 40
+#####################
+echo "enter numbers a and b "
+read a
+read b
+while [ 1 ]
+do
+c=$(( $a % $b ))
+if [ $c -eq 0 ]
+then
+echo "GCD = $b"
+exit
+fi
+a=$b
+b=$c
+done
+#####################
+Compare
+#####################
+echo -n "Enter first number: "
+read f
+echo -n "Enter second number: "
+read s
+echo -n "Enter third number: "
+read t
+
+
+if [ $f -gt $s -a $f -gt $t ]
+then
+
+   echo "First value is big"
+elif [ $s -gt $t ]
+ then
+   echo "Second value is big"
+else 
+   echo "Third value is big"
+
+fi
+#########################
+Even Odd
+#########################
+echo  "Enter numnber : "
+read n
+ 
+b=$(( $n % 2 ))
+ 
+if [ $b -eq 0 ]
+then
+  echo "$n is even number"
+else
+  echo "$n is odd number"
+fi
+#######################
+String
+#######################
+str1="AIUB"
+str2="AIUB"
+
+if [ "$str1" = "$str2" ]; then 
+   echo "String are same"
+else
+  echo "String are not same"
+fi
+#######################
